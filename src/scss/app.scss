@@ -1,0 +1,32 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+// Utils
+@import "./utils/reset";
+@import "./utils/sizes";
+@import "./utils/mixins";
+
+// Components
+
+
+
+// Pages
+@import "./pages/home";
+@import "./pages/article";
+
+
+// Layouts
+@import "./layouts/main-header";
+
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #1F1F26;
+  font-weight: 400;
+  overflow-x: hidden;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
