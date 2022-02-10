@@ -1,13 +1,13 @@
 import React from "react";
-import {useLocation, useParams} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import MainHeader from "../Layouts/MainHeader";
+import Tags from "../Components/Tags";
 
 const Article = () => {
-    let params = useParams();
+
     const location = useLocation()
     const {from} = location.state
     const rent = from
-    console.log(rent)
     return (
         <div className="rent-container">
             <MainHeader/>
@@ -19,15 +19,7 @@ const Article = () => {
                 <div className="rent-infos">
                     <h2>{rent.title}</h2>
                     <p>{rent.location}</p>
-                    <div className="rent-tags">
-                        {
-                            rent.tags.map((tag, key) => {
-                                return (
-                                    <div className="rent-tag" key={key}>{tag}</div>
-                                )
-                            })
-                        }
-                    </div>
+                        <Tags tags={rent.tags}/>
                 </div>
                 <div className="rent-infos right">
                     <div className="rent-host">
