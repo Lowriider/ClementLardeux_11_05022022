@@ -6,18 +6,17 @@ const GetRents = () => {
         <div className="rent-cards--container">
             {
                 rents.map((rent,key) => {
-                    console.log(rent)
                     return (
                         <Link className="rent-card--link"
                             to={`/article/${key}/${rent.id}`}
                         key={key}
                         state={{from: rent}}>
-                        <div className="rent-card">
-                            <div className="rent-image" style={{backgroundImage: 'url(' + rent.pictures[0] + ')'}}></div>
-                            <div className="rent-title--container">
-                                <h2 className="rent-title">{rent.title}</h2>
+                            <div className="rent-card">
+                                <div className="rent-image" style={{backgroundImage: 'url(' + rent.pictures[0] + ')'}}></div>
+                                <div className="rent-title--container">
+                                    <h2 className="rent-title">{rent.title}</h2>
+                                </div>
                             </div>
-                        </div>
                         </Link>
                     )
             })
