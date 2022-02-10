@@ -2,6 +2,7 @@ import React from "react";
 import GetRents from "../Components/GetRents";
 import "../../scss/app.scss"
 import MainHeader from "../Layouts/MainHeader";
+import MainFooter from "../Layouts/MainFooter";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <div className="home-container">
                 <GetRents/>
             </div>
+            <MainFooter/>
         </div>
     )
 }
