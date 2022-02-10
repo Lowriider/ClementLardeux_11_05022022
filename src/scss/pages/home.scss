@@ -1,11 +1,16 @@
 .view--home {
-  margin: 40px 100px;
+  .header-banner, .home-container {
+    margin: 40px 100px;
+  }
+
   .header-banner {
     margin-top: 68px;
     max-width: 1240px;
+
     img {
       width: 100%;
     }
+
     .banner-text {
       position: relative;
       //top: -100px;
@@ -16,6 +21,7 @@
       color: #FFFFFF;
     }
   }
+
   .home-container {
     .rent-cards--container {
       background: #F7F7F7;
@@ -44,13 +50,14 @@
 
           .rent-title--container {
             max-width: 340px;
-            height:76px;
+            height: 76px;
             background-color: #EBEBEB;
             position: relative;
             top: -90px;
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;
             opacity: 0.6;
+
             .rent-title {
               max-width: 260px;
               opacity: 1;
