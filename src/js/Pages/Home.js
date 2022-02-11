@@ -8,9 +8,10 @@ const Home = () => {
     return (
         <div className="view--home">
             <MainHeader/>
-            <div className="header-banner">
-                <img src="/images/banner.svg" alt=""/>
-                <p className="banner-text">Chez vous, partout et ailleurs</p>
+            <div className="header-banner-container">
+                <div className="header-banner" style={{backgroundImage:'url(/images/banner.svg)'}}>
+                    <p className="banner-text">Chez vous, partout et ailleurs</p>
+                </div>
             </div>
             <div className="home-container">
                 <GetRents/>
