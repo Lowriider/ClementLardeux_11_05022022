@@ -122,7 +122,11 @@
           padding: 13px 20px;
           align-items: center;
           cursor: pointer;
-
+          &.active {
+            img {
+              transform: rotate(180deg);
+            }
+          }
           p {
             color: #FFFFFF;
           }
@@ -145,7 +149,7 @@
           &.active {
             height: 240px;
             overflow: hidden;
-            transition: height .8s ease-in-out;
+            transition: height .8s ease;
             padding: 30px 20px;
           }
           p {
