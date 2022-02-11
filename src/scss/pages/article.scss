@@ -1,123 +1,159 @@
 .rent-container {
+  .rent-content {
   margin: 40px 100px;
+    .swiper-container {
+      margin-top: 25px;
 
-  .swiper-container {
-    margin-top: 25px;
-
-    .swiper-image {
-      max-width: 1240px;
-      height: 415px;
-      border-radius: 25px;
-      background-size: cover;
-      background-position: 50% 50%;
+      .swiper-image {
+        max-width: 1240px;
+        height: 415px;
+        border-radius: 25px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
     }
-  }
 
-  .rent-infos--container {
-    margin-top: 30px;
-    display: flex;
-    .rent-infos {
-      width: calc(100% / 2);
-      h2 {
-        font-weight: 500;
-        font-size: 36px;
-        line-height: 142.6%;
-        color: #FF6060;
-      }
-      p {
-        font-weight: 500;
-        font-size: 18px;
-        color: #FF6060;
-      }
-      .rent-tags {
-        margin-top: 20px;
-        display: flex;
-        .rent-tag {
-          background-color: #FF6060;
-          padding: 5px 40px;
+    .rent-infos--container {
+      margin-top: 30px;
+      display: flex;
+
+      .rent-infos {
+        width: calc(100% / 2);
+
+        h2 {
           font-weight: 500;
-          font-size: 14px;
+          font-size: 36px;
           line-height: 142.6%;
-          text-align: center;
-          color: #FFFFFF;
-          border-radius: 10px;
-          margin-right: 10px;
+          color: #FF6060;
         }
-      }
-    }
-    .rent-infos.right {
-      .rent-host {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        .rent-host--name {
-          max-width: 93px;
+
+        p {
           font-weight: 500;
           font-size: 18px;
-          line-height: 142.6%;
-          align-items: flex-end;
-          text-align: right;
           color: #FF6060;
-          margin-right: 10px;
         }
-        .rent-host--picture {
+
+        .rent-tags {
+          margin-top: 20px;
+          display: flex;
+
+          .rent-tag {
+            background-color: #FF6060;
+            padding: 5px 40px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 142.6%;
+            text-align: center;
+            color: #FFFFFF;
+            border-radius: 10px;
+            margin-right: 10px;
+            align-items: center;
+            display: flex;
+          }
+        }
+      }
+
+      .rent-infos.right {
+        .rent-host {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          .rent-host--name {
+            max-width: 93px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 142.6%;
+            align-items: flex-end;
+            text-align: right;
+            color: #FF6060;
+            margin-right: 10px;
+          }
+
+          .rent-host--picture {
             width: 64px;
             height: 64px;
             background-size: cover;
             background-position: 50% 50%;
             border-radius: 50%;
+          }
         }
-      }
-      .stars-container {
-        margin-top: 24px;
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 10px;
-        img {
-          width: 30px;
-          height: 30px;
-          margin-right: 10px;
-          &:last-child {
-            margin-right: 0;
+
+        .stars-container {
+          margin-top: 24px;
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 10px;
+
+          img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+
+            &:last-child {
+              margin-right: 0;
+            }
           }
         }
       }
     }
-  }
-  .dropdown-container {
-    display: flex;
-    .rent-dropdown {
-      width: 100%;
-      max-width: calc(100% / 2);
-      margin-top: 24px;
-      margin-right: 76px;
-      &:last-child {
-        margin-right: 0;
-      }
-      .dropdown-header {
-        border-radius: 10px;
-        background-color: #FF6060;
-        display: flex;
-        justify-content: space-between;
-        margin: 0 ;
-        padding: 13px 20px;
-        p {
-          color: #FFFFFF;
+
+    .dropdown-container {
+      display: flex;
+      height: 249px;
+      .rent-dropdown {
+        width: 100%;
+        max-width: calc(100% / 2);
+        margin-top: 24px;
+        margin-right: 76px;
+
+        &:last-child {
+          margin-right: 0;
         }
-        img {
-          width: 15.5px;
-          height: 26px;
+
+        .dropdown-header {
+          position: relative;
+          z-index: 1;
+          border-radius: 10px;
+          background-color: #FF6060;
+          display: flex;
+          justify-content: space-between;
+          margin: 0;
+          padding: 13px 20px;
+          align-items: center;
+          cursor: pointer;
+
+          p {
+            color: #FFFFFF;
+          }
+
+          img {
+            width: 15.5px;
+            height: 26px;
+          }
         }
-      }
-      .dropdown-content {
-        padding: 30px 20px;
-        background: #F7F7F7;
-        border-radius: 10px;
-        p {
-          font-weight: normal;
-          font-size: 18px;
-          line-height: 142.6%;
-          color: #FF6060;
+
+        .dropdown-description, .dropdown-equipments {
+          position: relative;
+          height: 0;
+          z-index: 0;
+          top: -10px;
+          background: #F7F7F7;
+          border-radius: 10px;
+          overflow: hidden;
+          transition: all .8s ease;
+          &.active {
+            height: 240px;
+            overflow: hidden;
+            transition: height .8s ease-in-out;
+            padding: 30px 20px;
+          }
+          p {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 142.6%;
+            color: #FF6060;
+          }
         }
       }
     }
