@@ -1,7 +1,21 @@
-.arrows-container {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
-  top: 250px;
+
+.swiper-container {
+  margin-top: 25px;
+  .arrows-container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: calc(100% - 240px);
+    z-index: 2;
+    top: 310px;
+    margin: 0 20px;
+
+  }
+  .swiper-image {
+    height: 415px;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
 }
+

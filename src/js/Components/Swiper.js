@@ -18,13 +18,7 @@ const Swiper = ({pictures}) => {
                 <img onClick={prevSlide} src="/images/swiper_arrow_left.svg" alt=""/>
                 <img onClick={nextSlide} src="/images/swiper_arrow_right.svg" alt=""/>
             </div>
-            {
-                pictures.map((picture, key) => {
-                    return (
-                        <div key={key} className="swiper-image" style={{backgroundImage: 'url(' + picture + ')'}}/>
-                    )
-                })
-            }
+            <div className="swiper-image" style={{backgroundImage: 'url(' + pictures[current] + ')'}}/>
         </div>
     )
 }
