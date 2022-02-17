@@ -4,7 +4,9 @@ const MainHeader = () => {
     return (
         <div className="header-container">
             <div className="nav-bar">
-                <img src="/images/logo.svg" alt=""/>
+                <Link to="/">
+                    <img path={"/"} src="/images/logo.svg" alt=""/>
+                </Link>
                 <nav className="nav-links">
                     <Link to="/">Accueil</Link>
                     <Link to="/about">A Propos</Link>
