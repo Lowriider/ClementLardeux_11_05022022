@@ -15,8 +15,8 @@ const Article = () => {
 
     return (
         <div className="rent-container">
+            <MainHeader/>
             <div className="rent-content">
-                <MainHeader/>
                 {/* rent slider component*/}
                     <Swiper pictures={rent.pictures}/>
                 <div className="rent-infos--container">
