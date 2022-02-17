@@ -8,6 +8,7 @@ import {
 import Home from "./js/Pages/Home";
 import Article from "./js/Pages/Article";
 import About from "./js/Pages/About";
+import NotFound from "./js/Pages/NotFound"
 
 ReactDOM.render(
     <BrowserRouter>
@@ -17,12 +18,7 @@ ReactDOM.render(
             <Route path="/article/:key/:rentId" element={<Article/>}/>
             <Route
                 path="*"
-                element={
-                    <main style={{padding: "1rem"}}>
-                        {/*404 component*/}
-                        <p>There's nothing here!</p>
-                    </main>
-                }
+                element={<NotFound/>}
             />
         </Routes>
     </BrowserRouter>,
