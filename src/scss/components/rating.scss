@@ -1,0 +1,16 @@
+.stars-container {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
