@@ -1,5 +1,6 @@
 import MainHeader from "../Layouts/MainHeader";
 import {Link} from "react-router-dom";
+import MainFooter from "../Layouts/MainFooter";
 
 
 const ErrorPage = () => {
@@ -11,6 +12,7 @@ const ErrorPage = () => {
                 <p>Oups! La page que vous demandez n'existe pas.</p>
                 <Link to="/">Retourner sur la page d’accueil</Link>
             </div>
+            <MainFooter/>
         </div>
     )
 }
