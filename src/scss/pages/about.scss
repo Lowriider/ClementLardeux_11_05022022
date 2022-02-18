@@ -25,13 +25,12 @@
   }
 
   .about-container {
-    margin: 40px 100px;
+    margin: 0 100px 100px 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     .about-dropdown {
       width: 100%;
-      max-width: 1023px;
       margin-top: 31px;
 
       .dropdown-header {
