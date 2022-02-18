@@ -2,7 +2,7 @@
 // import Home from "../js/Pages/Home";
 // import ErrorPage from "../js/Pages/404";
 //
-// const Rooutes = () => {
+// const Router = () => {
 //     return (
 //         <BrowserRouter>
 //             <Routes>
@@ -16,4 +16,4 @@
 //     )
 // }
 //
-// export default Rooutes
+// export default Router
