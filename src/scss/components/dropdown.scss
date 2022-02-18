@@ -1,7 +1,10 @@
 .dropdown-container {
   display: flex;
   height: 249px;
-  .rent-dropdown {
+  width: 100%;
+  justify-content: center;
+
+  .rent-dropdown,.about-dropdown {
     width: 100%;
     max-width: calc(100% / 2);
     margin-top: 24px;
@@ -59,5 +62,8 @@
         color: #FF6060;
       }
     }
+  }
+  .about-dropdown {
+    max-width: 1023px;
   }
 }

@@ -3,9 +3,9 @@ import {useState} from "react";
 const Dropdown = ({datas, title}) => {
 
     const [isCollapseActive, setIsCollapseActive] = useState('')
-    
+
     return (
-            <div className="rent-dropdown">
+            <>
                 <div className={`dropdown-header ${isCollapseActive}`} onClick={(e) => setIsCollapseActive(isCollapseActive === '' ? 'active' : '')}>
                     <p>{title}</p>
                     <img src="/images/inactive_arrow.svg" alt=""/>
@@ -23,7 +23,7 @@ const Dropdown = ({datas, title}) => {
                             <p style={{display: isCollapseActive ? 'block' : 'none'}}>{datas}</p>
                     }
                 </div>
-            </div>
+            </>
     )
 }
 export default Dropdown
