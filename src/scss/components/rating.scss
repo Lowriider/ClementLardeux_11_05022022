@@ -3,7 +3,11 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: 10px;
-
+  @include small-device {
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   img {
     width: 30px;
     height: 30px;

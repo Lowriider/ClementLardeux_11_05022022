@@ -1,14 +1,24 @@
 .rent-container {
   .rent-content {
     margin: 40px 100px 100px 100px;
-
+    @include small-device {
+      margin: 40px 21px 80px 21px;
+    }
+    @include mobile {
+      margin: 22px 21px 200px 21px;
+    }
     .rent-infos--container {
       margin-top: 30px;
       display: flex;
-
+      @include small-device {
+        width: 100%;
+        flex-direction: column;
+      }
       .rent-infos {
         width: calc(100% / 2);
-
+        @include small-device {
+          width: 100%;
+        }
         h2 {
           font-weight: 500;
           font-size: 36px;
@@ -43,6 +53,12 @@
       }
 
       .rent-infos.right {
+        @include small-device {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          margin-top: 16px;
+        }
         .rent-host {
           display: flex;
           justify-content: flex-end;

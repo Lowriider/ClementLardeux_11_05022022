@@ -1,19 +1,39 @@
 .header-container {
   margin: 40px 100px;
+  @include small-device {
+    margin: 40px 21px;
+  }
+  @include mobile {
+    margin: 22px 21px;
+  }
   .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    a {
+      img {
+        @include small-device {
+          height: 47px;
+        }
+      }
+    }
     .nav-links {
       a {
+        text-decoration: none;
         margin-right: 57px;
         font-weight: 500;
         font-size: 24px;
         line-height: 142.6%;
-        text-decoration-line: underline;
         color: #FF6060;
         &:last-child {
           margin-right: 0;
+        }
+        &:hover {
+          text-decoration-line: underline;
+        }
+        @include small-device {
+          font-size: 12px;
+          margin-right: 10px;
         }
       }
     }

@@ -5,14 +5,28 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
-    width: calc(100% - 240px);
+    width: 100%;
+    max-width: calc(100% - 240px);
     z-index: 2;
     top: 320px;
     margin: 0 20px;
+    @include small-device {
+      max-width: calc(100% - 80px);
+    }
+    @include mobile {
+      top: 300px;
+    }
     img {
       cursor: pointer;
+      @include small-device {
+        width: 20px;
+        height: 40px;
+      }
+      @include mobile {
+        width: 11px;
+        height: 20px;
+      }
     }
-
   }
   .swiper-image {
     height: 415px;
