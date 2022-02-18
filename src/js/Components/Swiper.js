@@ -14,10 +14,13 @@ const Swiper = ({pictures}) => {
     }
     return (
         <div className="swiper-container">
-            <div className="arrows-container">
-                <img onClick={prevSlide} src="/images/swiper_arrow_left.svg" alt=""/>
-                <img onClick={nextSlide} src="/images/swiper_arrow_right.svg" alt=""/>
-            </div>
+            {
+                pictures.length > 1 &&
+                <div className="arrows-container">
+                    <img onClick={prevSlide} src="/images/swiper_arrow_left.svg" alt=""/>
+                    <img onClick={nextSlide} src="/images/swiper_arrow_right.svg" alt=""/>
+                </div>
+            }
             <div className="swiper-image" style={{backgroundImage: 'url(' + pictures[current] + ')'}}/>
         </div>
     )
