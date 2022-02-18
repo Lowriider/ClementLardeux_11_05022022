@@ -8,13 +8,18 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-  img {
+  svg {
     width: 30px;
     height: 30px;
     margin-right: 10px;
 
     &:last-child {
       margin-right: 0;
+    }
+    @include mobile {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
     }
   }
 }

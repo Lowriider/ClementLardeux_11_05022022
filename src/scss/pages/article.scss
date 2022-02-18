@@ -24,6 +24,9 @@
           font-size: 36px;
           line-height: 142.6%;
           color: #FF6060;
+          @include mobile {
+            font-size: 18px;
+          }
         }
 
         p {
@@ -48,6 +51,11 @@
             margin-right: 10px;
             align-items: center;
             display: flex;
+            @include mobile {
+              font-size: 10px;
+              padding: 2px 27px;
+              line-height: 14px;
+            }
           }
         }
       }
@@ -74,6 +82,9 @@
             text-align: right;
             color: #FF6060;
             margin-right: 10px;
+            @include mobile {
+              font-size: 12px;
+            }
           }
 
           .rent-host--picture {
@@ -82,6 +93,10 @@
             background-size: cover;
             background-position: 50% 50%;
             border-radius: 50%;
+            @include mobile {
+              width: 32px;
+              height: 32px;
+            }
           }
         }
       }

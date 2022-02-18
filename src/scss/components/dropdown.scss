@@ -33,7 +33,9 @@
       align-items: center;
       cursor: pointer;
       @include mobile {
+        font-size: 13px;
         height:30px;
+        border-radius: 5px;
       }
       &.active {
         img {
