@@ -18,7 +18,7 @@ const Article = () => {
             <MainHeader/>
             <div className="rent-content">
                 {/* rent slider component*/}
-                    <Swiper pictures={rent.pictures}/>
+                <Swiper pictures={rent.pictures}/>
                 <div className="rent-infos--container">
                     <div className="rent-infos">
                         <h2>{rent.title}</h2>
@@ -34,7 +34,10 @@ const Article = () => {
                         <Rating rating={rent.rating}/>
                     </div>
                 </div>
-                <Dropdown rent={rent}/>
+                <div className="dropdown-container">
+                    <Dropdown datas={rent.description} title={"Description"}/>
+                    <Dropdown datas={rent.equipments} title={"Équipements"}/>
+                </div>
             </div>
             <MainFooter/>
         </div>

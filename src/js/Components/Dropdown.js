@@ -1,45 +1,29 @@
 import {useState} from "react";
 
-const Dropdown = ({rent}) => {
+const Dropdown = ({datas, title}) => {
 
-    const [isDescriptionCollapseActive, setIsDescriptionCollapseActive] = useState('')
-    const [isEquimentsCollapseActive, setIsEquimentsCollapseActive] = useState('')
-
-    const toggleDropdown = (e) => {
-        if(e.target.nextElementSibling.classList.contains('dropdown-description'))
-        setIsDescriptionCollapseActive(isDescriptionCollapseActive === '' ? 'active' : '')
-        else
-            setIsEquimentsCollapseActive(isEquimentsCollapseActive === '' ? 'active' : '')
-    }
+    const [isCollapseActive, setIsCollapseActive] = useState('')
+    
     return (
-        <div className="dropdown-container">
             <div className="rent-dropdown">
-                <div className={`dropdown-header ${isDescriptionCollapseActive}`} onClick={(e) => toggleDropdown(e)}>
-                    <p>Description</p>
+                <div className={`dropdown-header ${isCollapseActive}`} onClick={(e) => setIsCollapseActive(isCollapseActive === '' ? 'active' : '')}>
+                    <p>{title}</p>
                     <img src="/images/inactive_arrow.svg" alt=""/>
                 </div>
-                {
-                    <div className={`dropdown-description ${isDescriptionCollapseActive}`}>
-                        <p style={{display: isDescriptionCollapseActive ? 'block' : 'none'}}>{rent.description}</p>
-                    </div>
-                }
-            </div>
-            <div className="rent-dropdown">
-                <div className={`dropdown-header ${isEquimentsCollapseActive}`} onClick={(e) => toggleDropdown(e)}>
-                    <p>Équipements</p>
-                    <img src="/images/inactive_arrow.svg" alt=""/>
-                </div>
-                <div className={`dropdown-equipments ${isEquimentsCollapseActive}`}>
+                <div className={`dropdown-content ${isCollapseActive}`}>
                     {
-                        rent.equipments.map((equipment, key) => {
-                            return (
-                                <p style={{display: isEquimentsCollapseActive ? 'block' : 'none'}} key={key}>{equipment}</p>
-                            )
-                        })
+                        (typeof datas === "object") ?
+                            datas.map((data, key) => {
+                                return (
+                                    <p style={{display: isCollapseActive ? 'block' : 'none'}}
+                                       key={key}>{data}</p>
+                                )
+                            })
+                            :
+                            <p style={{display: isCollapseActive ? 'block' : 'none'}}>{datas}</p>
                     }
                 </div>
             </div>
-        </div>
     )
 }
 export default Dropdown
