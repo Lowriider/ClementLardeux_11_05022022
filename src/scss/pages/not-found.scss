@@ -1,13 +1,19 @@
 .view--not-found {
   .not-found--container {
+
+    margin: 180px 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include mobile {
+      margin: 200px 58px;
+    }
     img {
-      margin: 100px auto;
+      width: 100%;
       max-width: 600px;
     }
     a {
-      margin:182px auto 0px;
+      margin:182px 0 0;
       font-weight: 500;
       font-size: 18px;
       line-height: 142.6%;
@@ -15,8 +21,10 @@
       color: #FF6060;
     }
     p {
-      margin: auto;
+      margin-top: 66px;
+      width: 100%;
       font-style: normal;
+      text-align: center;
       font-weight: 500;
       font-size: 36px;
       line-height: 142.6%;
