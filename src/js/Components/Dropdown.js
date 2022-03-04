@@ -6,7 +6,7 @@ const Dropdown = ({datas, title}) => {
 
     return (
             <>
-                <div className={`dropdown-header ${isCollapseActive}`} onClick={(e) => setIsCollapseActive(isCollapseActive === '' ? 'active' : '')}>
+                <div className={`dropdown-header ${isCollapseActive}`} onClick={() => setIsCollapseActive(isCollapseActive === '' ? 'active' : '')}>
                     <p>{title}</p>
                     <img src="/images/inactive_arrow.svg" alt=""/>
                 </div>

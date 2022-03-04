@@ -1,6 +1,4 @@
 import React from "react";
-import MainHeader from "../Layouts/MainHeader";
-import MainFooter from "../Layouts/MainFooter";
 import Dropdown from "../Components/Dropdown";
 
 const About = () => {
@@ -25,25 +23,23 @@ const About = () => {
     ]
 
     return (
-        <div className="view--about">
-            <MainHeader/>
-            <div className="header-banner-container">
-                <div className="header-banner" style={{backgroundImage: 'url(/images/banner_about.svg)'}}>
+            <div className="view--about">
+                <div className="header-banner-container">
+                    <div className="header-banner" style={{backgroundImage: 'url(/images/banner_about.jpg)'}}>
+                    </div>
+                </div>
+                <div className="about-container">
+                            {
+                                listDropdown.map((dropdown, key) => {
+                                    return (
+                                        <div key={key} className="about-dropdown">
+                                            <Dropdown datas={dropdown.content} title={dropdown.title}/>
+                                        </div>
+                                    )
+                                })
+                            }
                 </div>
             </div>
-            <div className="about-container">
-                        {
-                            listDropdown.map(dropdown => {
-                                return (
-                                    <div className="about-dropdown">
-                                        <Dropdown datas={dropdown.content} title={dropdown.title}/>
-                                    </div>
-                                )
-                            })
-                        }
-            </div>
-            <MainFooter/>
-        </div>
     )
 }
 

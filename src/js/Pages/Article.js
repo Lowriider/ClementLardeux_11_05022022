@@ -1,21 +1,23 @@
 import React from "react";
-import {useLocation} from "react-router-dom";
-import MainHeader from "../Layouts/MainHeader";
+import {useLocation, Navigate } from "react-router-dom";
 import Tags from "../Components/Tags";
-import MainFooter from "../Layouts/MainFooter";
 import Rating from "../Components/Rating";
 import Dropdown from "../Components/Dropdown";
 import Swiper from "../Components/Swiper";
 
 const Article = () => {
-
     const location = useLocation()
+
+    if(location.state === null)
+    {
+        return (
+            <Navigate to="/NotFound" />
+        )
+    }
     const {from} = location.state
     const rent = from
-
     return (
         <div className="rent-container">
-            <MainHeader/>
             <div className="rent-content">
                 <Swiper pictures={rent.pictures}/>
                 <div className="rent-infos--container">
@@ -28,7 +30,7 @@ const Article = () => {
                         <div className="rent-host">
                             <div className="rent-host--name">{rent.host.name}</div>
                             <div className="rent-host--picture"
-                                 style={{backgroundImage: 'url(' + rent.host.picture + ')'}}></div>
+                                 style={{backgroundImage: 'url(' + rent.host.picture + ')'}}/>
                         </div>
                         <Rating rating={rent.rating}/>
                     </div>
@@ -42,7 +44,6 @@ const Article = () => {
                     </div>
                 </div>
             </div>
-            <MainFooter/>
         </div>
     )
 }
