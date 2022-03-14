@@ -16,6 +16,7 @@ const Article = () => {
     }
     const {from} = location.state
     const rent = from
+
     return (
         <div className="rent-container">
             <div className="rent-content">

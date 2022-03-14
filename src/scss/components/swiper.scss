@@ -29,6 +29,25 @@
       }
     }
   }
+  .counter-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: -40px;
+    @include mobile {
+      display: none;
+    }
+    .counter {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 142.6%;
+
+      text-align: center;
+
+      color: #FFFFFF;
+    }
+  }
   .swiper-image {
     height: 415px;
     border-radius: 25px;
